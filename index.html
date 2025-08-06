@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GIS for Networks</title>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+  <style>
+    html, body, #cesiumContainer {
+      margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
+    }
+    #controls {
+      position: absolute;
+      top: 10px; left: 10px; z-index: 9999;
+      background: white; padding: 10px; border-radius: 8px;
+      font-family: sans-serif; font-size: 14px;
+    }
+    input[type="file"], select {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label>Cargar nodos CSV:</label>
+    <input type="file" id="nodesFile" accept=".csv">
+    <label>Cargar aristas CSV:</label>
+    <input type="file" id="edgesFile" accept=".csv">
+    <label>Cargar GeoJSON:</label>
+    <input type="file" id="geojsonFile" accept=".geojson,.json" multiple>
+    <label>Columna para colorear:</label>
+    <select id="colorColumnSelect"></select>
+  </div>
 
+  <div id="cesiumContainer"></div>
+  <div id="tooltip" style="
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: sans-serif;
+    z-index: 10000;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
