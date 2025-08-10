@@ -3,8 +3,8 @@
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.cesium-animation-rectButton .cesium-animation-buttonGlow { filter: url(#animation_blurred); }.cesium-animation-rectButton .cesium-animation-buttonMain { fill: url(#animation_buttonNormal); }.cesium-animation-buttonToggled .cesium-animation-buttonMain { fill: url(#animation_buttonToggled); }.cesium-animation-rectButton:hover .cesium-animation-buttonMain { fill: url(#animation_buttonHovered); }.cesium-animation-buttonDisabled .cesium-animation-buttonMain { fill: url(#animation_buttonDisabled); }.cesium-animation-shuttleRingG .cesium-animation-shuttleRingSwoosh { fill: url(#animation_shuttleRingSwooshGradient); }.cesium-animation-shuttleRingG:hover .cesium-animation-shuttleRingSwoosh { fill: url(#animation_shuttleRingSwooshHovered); }.cesium-animation-shuttleRingPointer { fill: url(#animation_shuttleRingPointerGradient); }.cesium-animation-shuttleRingPausePointer { fill: url(#animation_shuttleRingPointerPaused); }.cesium-animation-knobOuter { fill: url(#animation_knobOuter); }.cesium-animation-knobInner { fill: url(#animation_knobInner); }</style>
   
   <title>GIS_files</title>
-  <script src="./GIS_files/Cesium.js.descarga"></script>
-  <link href="./GIS_files/widgets.css" rel="stylesheet">
+  <script src="./GIS_files_files/Cesium.js.descarga"></script>
+  <link href="./GIS_files_files/widgets.css" rel="stylesheet">
   <style>
     html, body, #cesiumContainer {
       margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
@@ -142,6 +142,7 @@
     z-index: 10000;"></div>
 
   <script>
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0NmY5MDY4NC1lMWFiLTQ1MjQtOTA0Ni1kNzJlZDU1MTE3MzkiLCJpZCI6MzMwMzc2LCJpYXQiOjE3NTQ4MTQ4NzR9.dBciBn2LWzGj_3SQDXgexKNOb4IfvvL9RqkVCmDngf8';
     const viewer = new Cesium.Viewer("cesiumContainer", {
       terrainProvider: new Cesium.EllipsoidTerrainProvider(),
       baseLayerPicker: false
